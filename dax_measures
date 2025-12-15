@@ -1,0 +1,18 @@
+DAX
+
+-- Clean Total working days = 
+       VAR totalworkdays = COUNT('Clean Data'[Value])
+       VAR nonworkdays = CALCULATE(COUNT('Clean Data'[Value]),'Clean Data'[Value] IN {"WO", "HO"})
+-- RETURN
+      totalworkdays-nonworkdays
+
+-- Present days = 
+       VAR Presentdays= 
+            CALCULATE(COUNT('Clean Data'[Value]), 'Clean Data'[Value] = "P")
+-- RETURN
+       Presentdays + [WFH count]
+
+-- WFH count = SUM('Clean Data'[WFH Count])
+-- WFH % = DIVIDE([WFH count], [Total working days],0)
+-- SL count = SUM('Clean Data'[SL])
+-- SL % = DIVIDE([SL count], [Total working days])
