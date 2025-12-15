@@ -26,10 +26,11 @@ Employee attendance data containing:
 - The data indicates a growing preference for a *hybrid working model*
 
 ## Approach
-- Cleaned and validated attendance data
-- Calculated attendance and WFH percentages using DAX
-- Analyzed monthly trends to identify changes in employee work preferences
-- Built an interactive Power BI dashboard to visualize attendance patterns
+- Cleaned and formatted attendance data using DAX calculated columns and measures
+- Standardized attendance statuses (Present, WFH, Sick Leave)
+- Created date-based calculations for monthly and overall percentages
+- Developed KPI measures for Present %, WFH %, and Sick Leave %
+- Built an interactive Power BI dashboard for analysis and visualization
 
 ## Tools Used
 - Power BI (DAX, Data Modeling, Visualization)
